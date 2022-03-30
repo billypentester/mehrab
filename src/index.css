@@ -7,7 +7,89 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  color: #edf2f9;
 }
+
+.hoverlink{
+  text-decoration: none;
+}
+
+.hoverlink:hover{
+  text-decoration: underline;
+}
+
+.form{
+  position:absolute;
+  top:10%
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.3rem!important;
+  color: #212529;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+}
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  border-radius: 0.3rem!important;
+  z-index: -2;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0a58ca;
+  transition: all 0.3s;
+  border-radius: 0.3rem!important;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover:before {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #edf2f9; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0d6efd; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #12263f; 
+}
+
+
+
+
+
+
+
